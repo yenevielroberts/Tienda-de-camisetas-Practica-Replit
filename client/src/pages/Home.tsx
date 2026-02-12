@@ -37,6 +37,41 @@ const products = [
   },
 ];
 
+const healthProducts = [
+  {
+    id: 5,
+    name: "Wellness Zen",
+    price: "$44.99",
+    color: "Mint Green",
+    image: "🧘",
+    description: "Para tu práctica de yoga y meditación"
+  },
+  {
+    id: 6,
+    name: "Fit Life",
+    price: "$39.99",
+    color: "Teal",
+    image: "💪",
+    description: "Camiseta motivacional para entrenamientos"
+  },
+  {
+    id: 7,
+    name: "Mind & Body",
+    price: "$42.99",
+    color: "Lavender",
+    image: "🧠",
+    description: "Equilibrio entre mente y cuerpo"
+  },
+  {
+    id: 8,
+    name: "Energy Boost",
+    price: "$37.99",
+    color: "Coral",
+    image: "⚡💚",
+    description: "Impulsa tu energía y vitalidad"
+  },
+];
+
 const features = [
   {
     icon: ShoppingBag,
@@ -159,6 +194,49 @@ export default function Home() {
               className="group bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-all duration-300"
             >
               <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-300">
+                {product.image}
+              </div>
+              <div className="p-6 space-y-4">
+                <div>
+                  <h3 className="font-bold text-lg mb-1">{product.name}</h3>
+                  <p className="text-sm text-muted-foreground">{product.color}</p>
+                </div>
+                <p className="text-sm text-muted-foreground">{product.description}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <span className="text-2xl font-bold text-primary">{product.price}</span>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90">
+                    Añadir
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Health Section */}
+      <section className="mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">Colección Health & Wellness</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Camisetas diseñadas para apoyar tu bienestar, meditación y estilo de vida saludable
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {healthProducts.map((product, index) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="group bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-all duration-300"
+            >
+              <div className="aspect-square bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900 dark:to-blue-900 flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-300">
                 {product.image}
               </div>
               <div className="p-6 space-y-4">
