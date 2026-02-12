@@ -10,12 +10,12 @@ import About from "@/pages/About";
 
 function Router() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground">
+    <div className="min-h-screen bg-background font-sans text-foreground flex flex-col">
       <Sidebar />
       
-      {/* Main Content Area - Shifted by sidebar width on desktop */}
-      <main className="md:pl-64 min-h-screen transition-all duration-300">
-        <div className="container mx-auto px-4 py-20 md:py-12 md:px-8 max-w-7xl">
+      {/* Main Content Area */}
+      <main className="flex-1">
+        <div className="container mx-auto px-4 py-12 md:px-8 max-w-7xl">
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
