@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "incremental": true,
+    "incremental": false,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
     "module": "commonjs",
     "declaration": true,
@@ -31,20 +31,20 @@
     "server/database/**/*.ts",
     "server/health/**/*.ts",
     "server/messages/**/*.ts",
-    "shared/**/*.ts",
-    "test/**/*.ts"
+    "shared/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "client",
+    "test",
+    "**/*.spec.ts",
     "server/index.ts",
     "server/routes.ts",
     "server/storage.ts",
     "server/vite.ts",
-    "server/static.ts",
-    "vite.config.ts",
-    "script/**"
+    "server/static.ts"
   ]
 }
+

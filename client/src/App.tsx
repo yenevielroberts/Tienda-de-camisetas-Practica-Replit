@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/Sidebar";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
+import HealthCollection from "@/pages/HealthCollection";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/health-collection" component={HealthCollection} />
             <Route component={NotFound} />
           </Switch>
         </div>

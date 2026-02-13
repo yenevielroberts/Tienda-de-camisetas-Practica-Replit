@@ -9,7 +9,7 @@ export const messages = pgTable("messages", {
 
 export const insertMessageSchema = createInsertSchema(messages).pick({
   content: true,
-});
+} as any);
 
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = z.infer<typeof insertMessageSchema>;

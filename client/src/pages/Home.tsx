@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Zap, TrendingUp, Heart } from "lucide-react";
+import { Link } from "wouter";
 
 const products = [
   {
@@ -225,6 +226,11 @@ export default function Home() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Camisetas diseñadas para apoyar tu bienestar, meditación y estilo de vida saludable
           </p>
+          <Link href="/health-collection">
+            <Button size="lg" className="mt-6 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white">
+              Ver toda la colección ➜
+            </Button>
+          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
